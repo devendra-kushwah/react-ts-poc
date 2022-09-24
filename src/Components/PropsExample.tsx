@@ -6,7 +6,8 @@ interface Props {
     email?: string
 }
 
-// optional props value
+//-------------------optional props value ---------------
+// ------------------------------------------------------
 
 // interface Props {
 //     name?: string,
@@ -14,7 +15,9 @@ interface Props {
 //     email?: string
 // }
 
-// Example one 
+//------------------- Example one ------------------------
+// -------------------------------------------------------
+
 // const PropsExample = (props : Props) => {
 //     const { name, age, email } = props;
 //    return (
@@ -24,7 +27,8 @@ interface Props {
 //    )
 // }
 
-// Example two With destructuring 
+//------------------- Example two With destructuring ------------
+// --------------------------------------------------------------
 
 // const PropsExample = ({ name, age, email }  : Props) => {
   
@@ -35,15 +39,28 @@ interface Props {
 //    )
 // }
 
-// Example two With FC ( functional component )
+//------------------- Example two With FC ( functional component ) ------
+//------------------- With destructuring --------------------------------
 
-const PropsExample:FC<Props> = ({ name, age, email }) => {
+// const PropsExample:FC<Props> = ({ name, age, email }) => {
 
-    return (
-     <div>
-       {name }, {age} , {email}
-     </div>
-    )
- }
+//     return (
+//      <div>
+//        {name }, {age} , {email}
+//      </div>
+//     )
+//  }
+
+//------------------- Example Four ----------------------
+// -------------------------------------------------------
+
+const PropsExample:FC<Props> = (props) => {
+    const { name, age, email } = props;
+     return (
+      <div>
+        {name }, {age} , {email}
+      </div>
+     )
+  }
 
 export default PropsExample;
