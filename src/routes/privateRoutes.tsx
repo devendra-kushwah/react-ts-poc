@@ -4,16 +4,15 @@ import { Dashboard } from "../Pages";
 
 
 const PrivateRoutes = ()=> {
- let token = false;
+ let token:string = "";
+ localStorage.setItem("token", token);
  return token ? <Outlet /> : <Navigate to="/login" />
 }
 
 const renderPrivateRoutes = (
-    <>
     <Route path="/" element={<PrivateRoutes />}>
        <Route path="/dashboard" element={<Dashboard />} />
     </Route>
-    </>
   )
 
 

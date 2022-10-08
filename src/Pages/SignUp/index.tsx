@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
+
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+
+
 import Layout from "../../Layout/Layout";
 
 interface State {
@@ -54,6 +60,17 @@ const SignUp = () => {
       <br/>
       <br/>
       <Button color="secondary" size="large" variant="contained">Sign up</Button>
+      <br/>
+      <br/>
+      <Divider  light />
+      <br/>
+      <Typography variant="caption" display="block">
+         Already Have an account please <Button variant="text">
+          <NavLink to="/login">
+             Log in
+          </NavLink>
+        </Button>
+      </Typography>
     </form>
   </Box>
   </Layout>
