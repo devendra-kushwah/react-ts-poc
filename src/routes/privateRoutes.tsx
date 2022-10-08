@@ -9,11 +9,9 @@ const PrivateRoutes = ()=> {
 }
 
 const renderPrivateRoutes = (
-    <>
     <Route path="/" element={<PrivateRoutes />}>
        <Route path="/dashboard" element={<Dashboard />} />
     </Route>
-    </>
   )
 
 
