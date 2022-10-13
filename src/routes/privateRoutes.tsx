@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Outlet, Navigate } from "react-router-dom";
 import { Dashboard } from "../Pages";
 
 
 const PrivateRoutes = ()=> {
- let token:string = "";
- localStorage.setItem("token", token);
+  let token:string = "qwertyuiop";
+  useEffect(()=> {
+    localStorage.setItem("token", token || "");
+  }, [token])
+
  return token ? <Outlet /> : <Navigate to="/login" />
 }
 

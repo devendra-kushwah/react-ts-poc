@@ -10,7 +10,6 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-
 import Layout from "../../Layout/Layout";
 
 interface State {
