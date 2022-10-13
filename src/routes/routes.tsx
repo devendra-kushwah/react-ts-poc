@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, LonIn, SignUp } from "../Pages";
+import { Home, LongIn, SignUp } from "../Pages";
 
 import { renderPrivateRoutes} from "./privateRoutes";
 
@@ -9,7 +9,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/login" element={<LonIn />} />
+        <Route path="/login" element={<LongIn />} />
         <Route path="/signup" element={<SignUp />} />
         { renderPrivateRoutes }
       </Routes>

@@ -11,7 +11,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
 
-import Layout from "../../Layout/Layout";
+import Layout from "../../../Layout/Layout";
 
 interface State {
   mobile?: number | null,
@@ -20,7 +20,7 @@ interface State {
   showPassword: boolean,
 }
 
-const LonIn = () => {
+const SignUp = () => {
   const [values, setValues] = useState<State>({
     mobile: null,
     email: '',
@@ -59,15 +59,15 @@ const LonIn = () => {
       </FormControl>
       <br/>
       <br/>
-      <Button color="secondary" size="large" variant="contained">Loin in</Button>
+      <Button color="secondary" size="large" variant="contained">Sign up</Button>
       <br/>
       <br/>
       <Divider  light />
       <br/>
       <Typography variant="caption" display="block">
-         No account please <Button variant="text">
-         <NavLink to="/signup">
-             Sign up
+         Already Have an account please <Button variant="text">
+          <NavLink to="/login">
+             Log in
           </NavLink>
         </Button>
       </Typography>
@@ -77,4 +77,4 @@ const LonIn = () => {
   )
 }
 
-export default LonIn;
+export default SignUp;

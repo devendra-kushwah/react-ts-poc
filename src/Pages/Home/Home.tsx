@@ -4,7 +4,7 @@ import Layout from "../../Layout/Layout";
 const Home = () => {
   return (
     <Layout>
-        Home
+        This is common home page 
     </Layout>
   )
 }

@@ -1,6 +1,5 @@
 import Home from "./Home";
-import LonIn from "./LogIn";
-import SignUp from "./SignUp";
+import { LongIn, SignUp} from "./Public";
 import Dashboard from "./Dashboard";
 
-export { Home, LonIn, Dashboard, SignUp };
+export { Home, LongIn, Dashboard, SignUp };
