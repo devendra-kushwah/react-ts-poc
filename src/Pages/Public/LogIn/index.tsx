@@ -10,7 +10,6 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-
 import Layout from "../../../Layout/Layout";
 
 interface State {
@@ -27,6 +26,8 @@ const LongIn = () => {
     password: '',
     showPassword: false,
   });
+
+  const [error, setError] = useState<boolean>(false);
 
   const handleChange =
   (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
