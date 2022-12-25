@@ -4,7 +4,17 @@ import FormControl from "@mui/material/FormControl";
 
 import { BasicInput } from "./style";
 
-const BasicTextField = (props) => {
+type Props = {
+  className: string,
+  label: string,
+  fullWidth: any,
+  placeholder: string,
+  value: string | number,
+  onChange: any,
+  sx: {}
+}
+
+const BasicTextField = (props: Props) => {
   const { className="", label = "", fullWidth = true, placeholder="", value = "", onChange, sx = {} } = props;
   return (
     <FormControl fullWidth={fullWidth} sx={sx} className={className} variant="standard">
