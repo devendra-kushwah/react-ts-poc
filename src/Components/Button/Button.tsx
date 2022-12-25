@@ -1,7 +1,10 @@
-import React from "react";
-import {StyledDefaultButton} from "./style";
 
-const DefaultButton = (props) => {
+import React from "react";
+import LoadingButton from '@mui/lab/LoadingButton';
+
+import Props from "./types";
+
+const Button:React.FC<Props> = (props) => {
   const {
     children = "",
     type = "submit",
@@ -16,7 +19,7 @@ const DefaultButton = (props) => {
   } = props;
 
   return (
-    <StyledDefaultButton
+    <LoadingButton
       type={type}
       disabled={disabled}
       loading={loading}
@@ -28,8 +31,8 @@ const DefaultButton = (props) => {
       variant={variant}
     >
       {children}
-    </StyledDefaultButton>
+    </LoadingButton>
   );
 };
 
-export default DefaultButton;
+export default Button;

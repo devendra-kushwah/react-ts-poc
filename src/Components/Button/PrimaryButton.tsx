@@ -1,7 +1,9 @@
 import React from "react";
-import {StyledSecondaryButton} from "./style";
+import { StyledPrimaryButton } from "./style";
 
-const SecondaryButton = (props) => {
+import Props from "./types";
+
+const PrimaryButton:React.FC<Props> = (props) => {
   const {
     children = "",
     type = "submit",
@@ -16,7 +18,7 @@ const SecondaryButton = (props) => {
   } = props;
 
   return (
-    <StyledSecondaryButton
+    <StyledPrimaryButton
       type={type}
       disabled={disabled}
       loading={loading}
@@ -28,8 +30,8 @@ const SecondaryButton = (props) => {
       variant={variant}
     >
       {children}
-    </StyledSecondaryButton>
+    </StyledPrimaryButton>
   );
 };
 
-export default SecondaryButton;
+export default PrimaryButton;
