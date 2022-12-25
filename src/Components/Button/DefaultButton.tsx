@@ -1,7 +1,8 @@
-import React from "react";
-import {StyledPrimaryButton} from "./style";
+import { StyledDefaultButton } from "./style";
 
-const PrimaryButton = (props) => {
+import Props from "./types";
+
+const DefaultButton = (props: Props) => {
   const {
     children = "",
     type = "submit",
@@ -16,7 +17,7 @@ const PrimaryButton = (props) => {
   } = props;
 
   return (
-    <StyledPrimaryButton
+    <StyledDefaultButton
       type={type}
       disabled={disabled}
       loading={loading}
@@ -28,8 +29,8 @@ const PrimaryButton = (props) => {
       variant={variant}
     >
       {children}
-    </StyledPrimaryButton>
+    </StyledDefaultButton>
   );
 };
 
-export default PrimaryButton;
+export default DefaultButton;

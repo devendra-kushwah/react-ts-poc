@@ -5,10 +5,12 @@ import DialogTitle from '@mui/material/DialogTitle';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
+import Props  from "./types";
+
 import { StyledDialogBox } from "./style";
 import Button from "../Button/Button";
 
-function DialogBox(props) {
+function DialogBox(props: Props) {
   const { 
     open = false,
     titleColor= "",

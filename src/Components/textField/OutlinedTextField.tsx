@@ -10,7 +10,7 @@ type Props = {
   value?: string | number,
   onChange?: any,
   sx?: {},
-  focused: boolean 
+  focused: boolean,
 }
 
 const OutlinedTextField = (props: Props) => {
