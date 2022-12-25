@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, LongIn, SignUp } from "../Pages";
+import { Home, LongIn, SignUp } from "../modules";
 
 import { renderPrivateRoutes} from "./privateRoutes";
 

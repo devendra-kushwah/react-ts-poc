@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route, Outlet, Navigate } from "react-router-dom";
-import { Dashboard } from "../Pages";
+import { Dashboard } from "../modules";
 
 const PrivateRoutes = ()=> {
   let token:string = "qwertyuiop";
