@@ -1,21 +1,26 @@
 import React, { ReactNode } from "react";
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Header from "./Header/Header";
+import Header from "./header/Header";
 
 type Props = {
    children?: ReactNode,
    className?: string
+   sx?: any 
 }
 
-const Layout = ({ children, className }: Props)=> {
+const Layout = (props: Props)=> {
+  
+  const { children, className, sx={paddingTop: "65px"} } = props;
+
      return (
       <>
       <Header />
-      <main className={className || "main-content"}>
+      <Box component="main" sx={sx} className={className || "main-content"}>
         <Container>
           {children}
         </Container>
-      </main>
+      </Box>
       </>
      )
 }
