@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Layout from "../../../layout/Layout";
+import Layout from "../../../Layout/Layout";
 
 const Dashboard = () => {
 
