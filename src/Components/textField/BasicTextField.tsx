@@ -2,18 +2,9 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 
 import { BasicInput } from "./style";
+import Types from "./types";
 
-type Props = {
-  className?: string,
-  label?: string,
-  fullWidth?: any,
-  placeholder?: string,
-  value?: string | number,
-  onChange?: any,
-  sx?: {}
-}
-
-const BasicTextField = (props: Props) => {
+const BasicTextField = (props: Types) => {
   const { className="", label = "", fullWidth = true, placeholder="", value = "", onChange, sx = {} } = props;
   
   return (
