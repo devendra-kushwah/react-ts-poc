@@ -10,8 +10,7 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-import Layout from "../../../Layout/Layout";
-
+import Layout from "../../../layout/Layout";
 
 interface State {
   mobile?: number | null,
