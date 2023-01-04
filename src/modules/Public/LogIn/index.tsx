@@ -10,17 +10,11 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
-import Layout from "../../../layout/Layout";
-
-interface State {
-  mobile?: number | null,
-  email: string,
-  password: string,
-  showPassword: boolean,
-}
+import Layout from "layout/Layout";
+import Types from "./types";
 
 const LongIn = () => {
-  const [values, setValues] = useState<State>({
+  const [values, setValues] = useState<Types>({
     mobile: null,
     email: '',
     password: '',
@@ -30,7 +24,7 @@ const LongIn = () => {
   const [error, setError] = useState<boolean>(false);
   
   const handleChange =
-  (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  (prop: keyof Types) => (event: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [prop]: event.target.value });
   };
 

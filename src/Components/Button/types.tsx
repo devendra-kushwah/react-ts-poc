@@ -1,7 +1,9 @@
 import React from "react";
 
+// Props is just a name It can be anything (e.g State, Types)
+
 type Props = {
-    children?: React.ReactNode ,
+    children?: React.ReactNode,
     type? : any,
     disabled? : boolean,
     loading? : boolean,
@@ -9,7 +11,7 @@ type Props = {
     color? : any,
     size?: any,
     variant?: any,
-    onClick: any,
+    onClick?: any,
     sx? :{},
   }
 
