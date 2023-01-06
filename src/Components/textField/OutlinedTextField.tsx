@@ -2,18 +2,9 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import TextField from '@mui/material/TextField';
 
-type Props = {
-  className?: string,
-  label?: string,
-  fullWidth?: any,
-  placeholder?: string,
-  value?: string | number,
-  onChange?: any,
-  sx?: {},
-  focused: boolean,
-}
+import Types from "./types";
 
-const OutlinedTextField = (props: Props) => {
+const OutlinedTextField = (props: Types) => {
   const { className="", label = "", fullWidth = true, placeholder="", value = "", focused = true, onChange, sx = {} } = props;
   
   return (
