@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
+import { Box, FormControl, InputLabel, OutlinedInput, InputAdornment, Button, Divider, Typography } from '@mui/material';
 
-import Box from '@mui/material/Box';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
-import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
-
+import { style } from './style';
 import Layout from "layout/Layout";
 import Types from "./types";
 
 const LongIn = () => {
+
   const [values, setValues] = useState<Types>({
     mobile: null,
     email: '',
@@ -22,53 +16,50 @@ const LongIn = () => {
   });
 
   const [error, setError] = useState<boolean>(false);
-  
+
   const handleChange =
-  (prop: keyof Types) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
+    (prop: keyof Types) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValues({ ...values, [prop]: event.target.value });
+    };
 
   return (
-    <Layout>
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' , justifyContent: 'center' }}>
-    <form>
-      <FormControl fullWidth sx={{ m: 1 }}>
-        <InputLabel htmlFor="user-name-email">Mobile / Email</InputLabel>
-        <OutlinedInput
-          id="user-name-email"
-          value={values.mobile || values.email}
-          onChange={handleChange('mobile')}
-          startAdornment={<InputAdornment position="start"></InputAdornment>}
-          label="Mobile / Email"
-        />
-      </FormControl>
-      <FormControl fullWidth sx={{ m: 1 }}>
-        <InputLabel htmlFor="user-password">Password</InputLabel>
-        <OutlinedInput
-          id="user-password"
-          value={values.mobile || values.email}
-          onChange={handleChange('mobile')}
-          startAdornment={<InputAdornment position="start"></InputAdornment>}
-          label="Password"
-        />
-      </FormControl>
-      <br/>
-      <br/>
-      <Button color="secondary" size="large" variant="contained">Loin in</Button>
-      <br/>
-      <br/>
-      <Divider  light />
-      <br/>
-      <Typography variant="caption" display="block">
-         No account please <Button variant="text">
-         <NavLink to="/signup">
-             Sign up
-          </NavLink>
-        </Button>
-      </Typography>
-    </form>
-  </Box>
-  </Layout>
+    <Layout className='login-page' sx={{ padding: 0 }} enableHeader={false}>
+      <Box sx={style.box}>
+        <form>
+          <FormControl fullWidth sx={{ m: 1 }}>
+            <InputLabel htmlFor="user-name-email">Mobile / Email</InputLabel>
+            <OutlinedInput
+              id="user-name-email"
+              value={values.mobile || values.email}
+              onChange={handleChange('mobile')}
+              startAdornment={<InputAdornment position="start"></InputAdornment>}
+              label="Mobile / Email"
+            />
+          </FormControl>
+          <FormControl fullWidth sx={{ m: 1 }}>
+            <InputLabel htmlFor="user-password">Password</InputLabel>
+            <OutlinedInput
+              id="user-password"
+              value={values.mobile || values.email}
+              onChange={handleChange('mobile')}
+              startAdornment={<InputAdornment position="start"></InputAdornment>}
+              label="Password"
+            />
+          </FormControl>
+          <Button color="secondary" size="large" variant="contained">Loin in</Button>
+
+          <Divider light />
+
+          <Typography variant="caption" display="block">
+            No account please <Button variant="text">
+              <NavLink to="/signup">
+                Sign up
+              </NavLink>
+            </Button>
+          </Typography>
+        </form>
+      </Box>
+    </Layout>
   )
 }
 
