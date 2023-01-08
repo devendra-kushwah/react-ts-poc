@@ -22,51 +22,49 @@ const SignUp = () => {
   });
 
   const handleChange =
-  (prop: keyof Types) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
+    (prop: keyof Types) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValues({ ...values, [prop]: event.target.value });
+    };
 
   return (
-    <Layout>
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' , justifyContent: 'center' }}>
-    <form>
-      <FormControl fullWidth sx={{ m: 1 }}>
-        <InputLabel htmlFor="user-name-email">Mobile / Email</InputLabel>
-        <OutlinedInput
-          id="user-name-email"
-          value={values.mobile || values.email}
-          onChange={handleChange('mobile')}
-          startAdornment={<InputAdornment position="start"></InputAdornment>}
-          label="Mobile / Email"
-        />
-      </FormControl>
-      <FormControl fullWidth sx={{ m: 1 }}>
-        <InputLabel htmlFor="user-password">Password</InputLabel>
-        <OutlinedInput
-          id="user-password"
-          value={values.mobile || values.email}
-          onChange={handleChange('mobile')}
-          startAdornment={<InputAdornment position="start"></InputAdornment>}
-          label="Password"
-        />
-      </FormControl>
-      <br/>
-      <br/>
-      <Button color="secondary" size="large" variant="contained">Sign up</Button>
-      <br/>
-      <br/>
-      <Divider  light />
-      <br/>
-      <Typography variant="caption" display="block">
-         Already Have an account please <Button variant="text">
-          <NavLink to="/login">
-             Log in
-          </NavLink>
-        </Button>
-      </Typography>
-    </form>
-  </Box>
-  </Layout>
+    <Layout sx={{ padding: 0 }}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: 0 }}>
+        <form>
+          <FormControl fullWidth sx={{ m: 1 }}>
+            <InputLabel htmlFor="user-name-email">Mobile / Email</InputLabel>
+            <OutlinedInput
+              id="user-name-email"
+              value={values.mobile || values.email}
+              onChange={handleChange('mobile')}
+              startAdornment={<InputAdornment position="start"></InputAdornment>}
+              label="Mobile / Email"
+            />
+          </FormControl>
+          <FormControl fullWidth sx={{ m: 1 }}>
+            <InputLabel htmlFor="user-password">Password</InputLabel>
+            <OutlinedInput
+              id="user-password"
+              value={values.mobile || values.email}
+              onChange={handleChange('mobile')}
+              startAdornment={<InputAdornment position="start"></InputAdornment>}
+              label="Password"
+            />
+          </FormControl>
+
+          <Button color="secondary" size="large" variant="contained">Sign up</Button>
+
+          <Divider light />
+
+          <Typography variant="caption" display="block">
+            Already Have an account please <Button variant="text">
+              <NavLink to="/login">
+                Log in
+              </NavLink>
+            </Button>
+          </Typography>
+        </form>
+      </Box>
+    </Layout>
   )
 }
 
