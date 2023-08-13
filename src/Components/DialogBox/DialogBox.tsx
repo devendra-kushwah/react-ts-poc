@@ -1,22 +1,24 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Dialog, { DialogProps } from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Switch from '@mui/material/Switch';
+import React, { useState } from "react";
+import Dialog, { DialogProps } from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import {
+  Box,
+  Button,
+  Switch,
+  DialogContent,
+  DialogTitle,
+  FormControl,
+  FormControlLabel,
+  InputLabel,
+  MenuItem,
+} from "@mui/material";
+import DialogContentText from "@mui/material/DialogContentText";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 function DialogBox() {
-  const [open, setOpen] = React.useState(false);
-  const [fullWidth, setFullWidth] = React.useState(true);
-  const [maxWidth, setMaxWidth] = React.useState<DialogProps['maxWidth']>('sm');
+  const [open, setOpen] = useState<boolean>(false);
+  const [fullWidth, setFullWidth] = useState<boolean>(true);
+  const [maxWidth, setMaxWidth] = useState<DialogProps["maxWidth"]>("sm");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -33,7 +35,9 @@ function DialogBox() {
     );
   };
 
-  const handleFullWidthChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFullWidthChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     setFullWidth(event.target.checked);
   };
 
@@ -57,10 +61,10 @@ function DialogBox() {
             noValidate
             component="form"
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              m: 'auto',
-              width: 'fit-content',
+              display: "flex",
+              flexDirection: "column",
+              m: "auto",
+              width: "fit-content",
             }}
           >
             <FormControl sx={{ mt: 2, minWidth: 120 }}>
@@ -71,11 +75,11 @@ function DialogBox() {
                 onChange={handleMaxWidthChange}
                 label="maxWidth"
                 inputProps={{
-                  name: 'max-width',
-                  id: 'max-width',
+                  name: "max-width",
+                  id: "max-width",
                 }}
               >
-                <MenuItem value={false as any}>false</MenuItem>
+                <MenuItem>false</MenuItem>
                 <MenuItem value="xs">xs</MenuItem>
                 <MenuItem value="sm">sm</MenuItem>
                 <MenuItem value="md">md</MenuItem>
@@ -99,4 +103,4 @@ function DialogBox() {
     </React.Fragment>
   );
 }
-export default DialogBox; 
+export default DialogBox;

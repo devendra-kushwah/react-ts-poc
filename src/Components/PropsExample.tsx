@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
 interface Props {
-    name?: string,
-    age?: number,
-    email?: string
+  name?: string;
+  age?: number;
+  email?: string;
 }
 
 //-------------------Optional props value ---------------
@@ -31,7 +31,7 @@ interface Props {
 // --------------------------------------------------------------
 
 // const PropsExample = ({ name, age, email }  : Props) => {
-  
+
 //    return (
 //     <div>
 //       {name }, {age} , {email}
@@ -54,13 +54,13 @@ interface Props {
 //------------------- Example Four ----------------------
 // ------------------------------------------------------
 
-const PropsExample:FC<Props> = (props) => {
-    const { name, age, email } = props;
-     return (
-      <div>
-        {name }, {age} , {email}
-      </div>
-     )
-  }
+const PropsExample: FC<Props> = (props) => {
+  const { name, age, email } = props;
+  return (
+    <div>
+      {name}, {age} , {email}
+    </div>
+  );
+};
 
 export default PropsExample;

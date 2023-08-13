@@ -1,6 +1,6 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import IconButton from '@mui/material/IconButton';
+import IconButton from "@mui/material/IconButton";
 
 import { Search, StyledInputBase } from "./style";
 
@@ -11,7 +11,7 @@ const SearchBar = () => {
         placeholder="Search…"
         inputProps={{ "aria-label": "search" }}
       />
-       <IconButton>
+      <IconButton>
         <SearchIcon />
       </IconButton>
     </Search>

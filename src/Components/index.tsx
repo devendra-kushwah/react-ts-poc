@@ -5,6 +5,15 @@ import PrimaryButton from "./button/PrimaryButton";
 import DialogBox from "./dialogBox/DialogBox";
 import BasicTextField from "./textField/BasicTextField";
 import OutlinedTextField from "./textField/OutlinedTextField";
+import VendorCard from "./vendorCard";
 
-export { Button, BasicTextField, DialogBox, OutlinedTextField, PrimaryButton, DefaultButton, SearchBar };
-
+export {
+  Button,
+  BasicTextField,
+  DialogBox,
+  OutlinedTextField,
+  PrimaryButton,
+  DefaultButton,
+  SearchBar,
+  VendorCard,
+};

@@ -1,3 +1,4 @@
+import React from "react";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 
@@ -5,10 +6,18 @@ import { BasicInput } from "./style";
 import Types from "./types";
 
 const BasicTextField = (props: Types) => {
-  const { className="", label = "", fullWidth = true, placeholder="", value = "", onChange, sx = {} } = props;
-  
+  const {
+    className = "",
+    size = "medium",
+    label = "",
+    placeholder = "",
+    value = "",
+    onChange,
+    sx = {},
+  } = props;
+
   return (
-    <FormControl fullWidth={fullWidth} sx={sx} className={className} variant="standard">
+    <FormControl sx={sx} className={className} variant="standard">
       {label && (
         <InputLabel shrink htmlFor={`input-${value}`}>
           {label}
@@ -16,7 +25,7 @@ const BasicTextField = (props: Types) => {
       )}
       <BasicInput
         placeholder={placeholder}
-        size="small"
+        size={size}
         value={value}
         onChange={onChange}
         id={`input-${value}`}

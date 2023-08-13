@@ -1,7 +1,8 @@
 import React from "react";
-import {StyledSecondaryButton} from "./style";
+import { StyledSecondaryButton } from "./style";
+import Props from "./types";
 
-const SecondaryButton = (props) => {
+const SecondaryButton = (props: Props) => {
   const {
     children = "",
     type = "submit",
@@ -12,7 +13,7 @@ const SecondaryButton = (props) => {
     color = "primary",
     size = "small",
     variant = "contained",
-    onClick
+    onClick,
   } = props;
 
   return (

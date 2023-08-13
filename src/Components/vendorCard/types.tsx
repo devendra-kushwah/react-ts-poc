@@ -1,6 +1,8 @@
 import React from "react";
 
-interface Props {
+// Props is just a name It can be anything (e.g State, Types)
+
+type Props = {
   children?: React.ReactNode;
   type?: any;
   disabled?: boolean;
@@ -11,6 +13,6 @@ interface Props {
   variant?: any;
   onClick?: any;
   sx?: {};
-}
+};
 
 export default Props;

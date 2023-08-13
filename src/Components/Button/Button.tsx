@@ -1,10 +1,9 @@
-
 import React from "react";
-import LoadingButton from '@mui/lab/LoadingButton';
+import LoadingButton from "@mui/lab/LoadingButton";
 
 import Props from "./types";
 
-const Button:React.FC<Props> = (props) => {
+const Button: React.FC<Props> = (props) => {
   const {
     children = "",
     type = "submit",
@@ -15,7 +14,7 @@ const Button:React.FC<Props> = (props) => {
     color = "primary",
     size = "small",
     variant = "contained",
-    onClick
+    onClick,
   } = props;
 
   return (
