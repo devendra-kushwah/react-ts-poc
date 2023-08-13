@@ -3,7 +3,7 @@ import { StyledPrimaryButton } from "./style";
 
 import Props from "./types";
 
-const PrimaryButton:React.FC<Props> = (props) => {
+const PrimaryButton: React.FC<Props> = (props) => {
   const {
     children = "",
     type = "submit",
@@ -14,7 +14,7 @@ const PrimaryButton:React.FC<Props> = (props) => {
     color = "primary",
     size = "small",
     variant = "contained",
-    onClick
+    onClick,
   } = props;
 
   return (

@@ -1,5 +1,4 @@
 import { StyledDefaultButton } from "./style";
-
 import Props from "./types";
 
 const DefaultButton = (props: Props) => {
@@ -13,7 +12,7 @@ const DefaultButton = (props: Props) => {
     color = "primary",
     size = "small",
     variant = "contained",
-    onClick
+    onClick,
   } = props;
 
   return (

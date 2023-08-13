@@ -1,17 +1,19 @@
 import React, { useState, useEffect, MouseEvent } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Badge from "@mui/material/Badge";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import Avatar from "@mui/material/Avatar";
-import Divider from "@mui/material/Divider";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import Tooltip from "@mui/material/Tooltip";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Tooltip,
+  IconButton,
+  ListItemIcon,
+  Typography,
+  Badge,
+  MenuItem,
+  Menu,
+  Avatar,
+  Divider,
+} from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -25,7 +27,6 @@ import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlin
 import { SearchBar } from "../../components";
 
 function Header() {
-
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     useState<null | HTMLElement>(null);
@@ -68,6 +69,7 @@ function Header() {
   }, [isToken]);
 
   const menuId = "primary-search-account-menu";
+
   const privateLinks = (
     <div>
       <MenuItem>
@@ -118,7 +120,7 @@ function Header() {
             mr: 1,
           },
           "&:before": {
-            content: '""',
+            content: "''",
             display: "block",
             position: "absolute",
             top: 0,
@@ -160,26 +162,6 @@ function Header() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {/* <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem> */}
       <Tooltip title="Account settings">
         <IconButton
           onClick={handleClick}
@@ -216,10 +198,11 @@ function Header() {
           >
             LOGO
           </Typography>
-     
+
           <Box sx={{ flexGrow: 1 }} />
+
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <SearchBar />
+            <SearchBar />
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
@@ -241,6 +224,7 @@ function Header() {
               <AccountCircle />
             </IconButton>
           </Box>
+
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"

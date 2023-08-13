@@ -1,8 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, LongIn, SignUp } from "../modules";
-
-import { renderPrivateRoutes} from "./privateRoutes";
-
+import { renderPrivateRoutes } from "./privateRoutes";
 
 function Router() {
   return (
@@ -11,10 +9,9 @@ function Router() {
         <Route index element={<Home />} />
         <Route path="/login" element={<LongIn />} />
         <Route path="/signup" element={<SignUp />} />
-        { renderPrivateRoutes }
+        {renderPrivateRoutes}
       </Routes>
     </BrowserRouter>
-   
   );
 }
 export default Router;
