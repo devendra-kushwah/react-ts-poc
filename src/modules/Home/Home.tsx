@@ -6,11 +6,7 @@ const Home = () => {
   return (
     <Layout enableHeader>
       This is common home page
-      <>
-        {Array(10).map((index) => {
-          return <VendorCard key={index} />;
-        })}
-      </>
+      <VendorCard />
     </Layout>
   );
 };

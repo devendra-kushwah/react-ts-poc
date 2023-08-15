@@ -6,6 +6,7 @@ import DialogBox from "./dialogBox/DialogBox";
 import BasicTextField from "./textField/BasicTextField";
 import OutlinedTextField from "./textField/OutlinedTextField";
 import VendorCard from "./vendorCard";
+import ProfileAvatar from "./ProfileAvatar";
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   DefaultButton,
   SearchBar,
   VendorCard,
+  ProfileAvatar,
 };

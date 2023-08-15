@@ -15,6 +15,11 @@ import {
   Divider,
 } from "@mui/material";
 
+interface Props {
+  handleDrawerOpen?: () => void;
+  open?: boolean;
+}
+
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -26,7 +31,8 @@ import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlin
 
 import { SearchBar } from "../../components";
 
-function Header() {
+const Header: React.FC<Props> = (props) => {
+  const { handleDrawerOpen, open } = props;
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     useState<null | HTMLElement>(null);
@@ -179,14 +185,17 @@ function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="default">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
-            size="large"
-            edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{
+              marginRight: 5,
+              ...(open && { display: "none" }),
+            }}
           >
             <MenuIcon />
           </IconButton>
@@ -201,7 +210,7 @@ function Header() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <SearchBar />
             <IconButton
               size="large"
@@ -223,7 +232,7 @@ function Header() {
             >
               <AccountCircle />
             </IconButton>
-          </Box>
+          </Box> */}
 
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -243,5 +252,5 @@ function Header() {
       {renderMenu}
     </Box>
   );
-}
+};
 export default Header;
