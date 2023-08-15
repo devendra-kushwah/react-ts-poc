@@ -67,4 +67,4 @@ function PrivateMenu() {
     </React.Fragment>
   );
 }
-export default PrivateMenu();
+export default PrivateMenu;
