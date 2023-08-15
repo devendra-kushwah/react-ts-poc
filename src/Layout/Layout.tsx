@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Header from "layout/header/Header";
+import SidebarMenu from "./sidebarMenu";
 
 type Props = {
   children?: ReactNode;
@@ -19,7 +20,7 @@ const Layout = (props: Props) => {
   return (
     <>
       {enableHeader && <Header />}
-
+      {/* <SidebarMenu /> */}
       <Box component="main" sx={sx} className={className || "main-content"}>
         {children}
       </Box>
