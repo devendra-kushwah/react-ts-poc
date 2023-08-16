@@ -1,11 +1,10 @@
 import React from "react";
-import Layout from "layout/Layout";
-import { VendorCard } from "../../components";
+import Layout from "layout/Dashboard/Layout";
+import { VendorCard } from "../../shared-components";
 
 const Home = () => {
   return (
-    <Layout enableHeader>
-      This is common home page
+    <Layout>
       <VendorCard />
     </Layout>
   );

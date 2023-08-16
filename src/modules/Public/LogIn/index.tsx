@@ -5,8 +5,8 @@ import { Box, Divider, Stack, Grid, Typography } from "@mui/material";
 import { style, Wrapper } from "./style";
 import Layout from "layout/Layout";
 import Types from "./types";
-import BasicTextField from "components/textField/BasicTextField";
-import { DefaultButton, Button } from "components";
+import BasicTextField from "shared-components/textField/BasicTextField";
+import { DefaultButton, Button } from "shared-components";
 
 const LongIn = () => {
   const navigate = useNavigate();
