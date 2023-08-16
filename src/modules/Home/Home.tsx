@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "layout/Header/Layout";
+import Layout from "layout/Dashboard/Layout";
 import { VendorCard } from "../../shared-components";
 
 const Home = () => {

@@ -3,15 +3,12 @@ import MuiDrawer from "@mui/material/Drawer";
 import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
 import {
   List,
-  IconButton,
   ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
   Divider,
 } from "@mui/material";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { primary } from "./menuConfig";
@@ -37,14 +34,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
     width: `calc(${theme.spacing(8)} + 1px)`,
   },
 });
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-}));
+
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
@@ -60,6 +50,9 @@ const Drawer = styled(MuiDrawer, {
     ...closedMixin(theme),
     "& .MuiDrawer-paper": closedMixin(theme),
   }),
+  ".MuiDrawer-paper": {
+    marginTop: 63,
+  },
 }));
 
 interface Props {
@@ -68,20 +61,9 @@ interface Props {
 }
 
 const DrawerMenu: React.FC<Props> = (props) => {
-  const theme = useTheme();
-  const { open, handleDrawerClose } = props;
+  const { open } = props;
   return (
-    <Drawer variant="permanent" open={open}>
-      <DrawerHeader>
-        <IconButton onClick={handleDrawerClose}>
-          {theme.direction === "rtl" ? (
-            <ChevronRightIcon />
-          ) : (
-            <ChevronLeftIcon />
-          )}
-        </IconButton>
-      </DrawerHeader>
-      <Divider />
+    <Drawer className="checkkar" variant="permanent" open={open}>
       <List>
         {primary?.map((text, index) => (
           <ListItem key={text} disablePadding sx={{ display: "block" }}>

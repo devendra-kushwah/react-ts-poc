@@ -24,7 +24,7 @@ const AppBar = styled(MuiAppBar, {
   }),
   ...(open && {
     marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+    // width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -36,7 +36,7 @@ const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setOpen((prev) => !prev);
   };
 
   const handleDrawerClose = () => {
@@ -53,15 +53,15 @@ const Header = () => {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: "none" }),
-            }}
+            // sx={{
+            //   marginRight: 5,
+            //   // ...(open && { display: "none" }),
+            // }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            Logo
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
