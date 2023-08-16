@@ -17,7 +17,6 @@ const Layout = (props: Props) => {
   } = props;
   return (
     <>
-      <Header />
       <Box component="main" sx={sx} className={className || "main-content"}>
         {children}
       </Box>
